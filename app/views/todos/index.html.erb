@@ -1,0 +1,13 @@
+<h1>Things to do</h1>
+
+<ul>
+  <% @todos.each do |todo| %>
+  	<li><%= todo.activity %></li>
+  <% end -%>
+</ul>
+
+<%= form_for @todo do |f| -%>
+  <%= f.label :activity %>
+  <%= f.text_field :activity %>
+  <%= f.submit "Create item" %>
+<% end -%>
